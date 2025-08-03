@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎯 Number Guessing Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex items-center justify-center bg-gradient-to-br from-[#fdfcfb] to-[#e2d1c3] font-[Segoe_UI]">
+
+  <div class="bg-white/20 backdrop-blur-lg shadow-lg border border-white/30 rounded-3xl p-10 w-[95%] md:w-[400px] text-center space-y-6 transition-all duration-500">
+    <h1 class="text-2xl font-extrabold text-pink-600 animate-bounce">🎯 Number Guessing Game</h1>
+    <p class="text-gray-700 font-medium">Guess a number between <span class="font-bold text-pink-500">1 to 9</span></p>
+
+    <input
+      type="number"
+      id="num"
+      placeholder="Your guess here..."
+      class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+    />
+
+    <button
+      onclick="Check()"
+      class="bg-pink-500 text-white font-bold px-6 py-2 rounded-xl hover:bg-pink-600 transition duration-300 w-full"
+    >
+      Submit 🎯
+    </button>
+
+    <p id="result" class="text-lg font-bold transition-all duration-300"></p>
+    <div id="history" class="text-sm text-gray-600 italic"></div>
+
+    <button
+      id="resetBtn"
+      onclick="resetGame()"
+      class="hidden bg-red-400 text-white font-bold px-6 py-2 rounded-xl hover:bg-red-800 transition duration-300 w-full"
+    >
+      🔄 Play Again
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
